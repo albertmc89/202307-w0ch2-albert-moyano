@@ -11,10 +11,8 @@ const generateDeckCards = () => {
       cardDeck.push(card);
     }
   }
-  // return cardDeck;
-  console.log(cardDeck);
+  return cardDeck;
 };
-generateDeckCards();
 
 const getRandomCard = () => {
   const randomValue = Math.floor(Math.random() * cardValue.length);
@@ -23,4 +21,10 @@ const getRandomCard = () => {
 
   return `Esta es la carta generada aleatoriamente: ${randomCard}`;
 };
-getRandomCard();
+
+const playGame = () => {
+  generateDeckCards();
+  getRandomCard();
+  console.log(getRandomCard());
+};
+playGame();
