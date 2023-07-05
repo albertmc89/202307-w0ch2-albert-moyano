@@ -15,10 +15,14 @@ const generateDeckCards = () => {
     "K",
   ];
   let cardDeck = [];
-  for (let i = 0; i < cardSuit.length; i++) {
-    for (let j = 0; j < cardValue.length; j++) {
-      let suit = cardSuit[i];
-      let value = cardValue[j];
+  for (let positionSuit = 0; positionSuit < cardSuit.length; positionSuit++) {
+    for (
+      let positionValue = 0;
+      positionValue < cardValue.length;
+      positionValue++
+    ) {
+      let suit = cardSuit[positionSuit];
+      let value = cardValue[positionValue];
       let card = `${value} ${suit}`;
       cardDeck.push(card);
     }
