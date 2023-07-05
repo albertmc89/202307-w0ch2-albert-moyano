@@ -1,7 +1,19 @@
-const cardSuit = ["hearts", "spades", "diamonds", "clubs"];
-const cardValue = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-
 const generateDeckCards = () => {
+  const cardSuit = ["hearts", "spades", "diamonds", "clubs"];
+  const cardValue = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
   let cardDeck = [];
   for (let i = 0; i < cardSuit.length; i++) {
     for (let j = 0; j < cardValue.length; j++) {
@@ -14,10 +26,9 @@ const generateDeckCards = () => {
   return cardDeck;
 };
 
-const getRandomCard = () => {
-  const randomValue = Math.floor(Math.random() * cardValue.length);
-  const randomSuit = Math.floor(Math.random() * cardSuit.length);
-  const randomCard = `${cardValue[randomValue]} ${cardSuit[randomSuit]}`;
+const getRandomCard = (cardDeck) => {
+  const randomValue = Math.floor(Math.random() * cardDeck.length);
+  const randomCard = `${cardDeck[randomValue]}`;
 
   return `Esta es la carta generada aleatoriamente: ${randomCard}`;
 };
