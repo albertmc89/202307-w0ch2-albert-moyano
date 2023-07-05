@@ -1,5 +1,5 @@
 const generateDeckCards = () => {
-  const cardSuit = ["hearts", "spades", "diamonds", "clubs"];
+  const cardSuit = ["♥️ ", "♠️ ", "♦️ ", "♣️ "];
   const cardValue = [
     "2",
     "3",
