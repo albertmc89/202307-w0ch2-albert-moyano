@@ -23,8 +23,8 @@ const getRandomCard = () => {
 };
 
 const playGame = () => {
-  generateDeckCards();
-  getRandomCard();
-  console.log(getRandomCard());
+  const deckToPlay = generateDeckCards();
+  const randomCard = getRandomCard(deckToPlay);
+  console.log(randomCard);
 };
 playGame();
