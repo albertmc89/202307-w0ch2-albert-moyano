@@ -61,7 +61,7 @@ const playGame = () => {
     randomCardToGuess = getRandomCard(deckToPlay);
     buttonSmaller.disabled = false;
     buttonGreater.disabled = false;
-    card2Element.textContent = "";
+    card2Element.textContent = "?";
     card1Element.textContent = randomCard;
     displayLoseElement.classList.add("hidden");
     displayWinElement.classList.add("hidden");
