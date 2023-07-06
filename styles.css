@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(222, 239, 236);
+  font-weight: 700;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  margin-top: 150px;
+}
+
+.button__start {
+  background-color: beige;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10%;
+  border-color: black;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.button__start:active {
+  background-color: rgb(233, 210, 179);
+}
+
+.container__game {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.button__container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.hidden {
+  display: none;
+}
