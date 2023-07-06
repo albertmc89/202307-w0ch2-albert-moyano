@@ -1,5 +1,12 @@
+const buttonStart = document.querySelector(".button__start");
+const containerElement = document.querySelector(".container");
+const container__gameElement = document.querySelector(".container__game");
+
+const buttonGreater = document.querySelector(".button__greater");
+const card1 = document.querySelector(".card1");
+
 const generateDeckCards = () => {
-  const cardSuit = ["♥️ ", "♠️ ", "♦️ ", "♣️ "];
+  const cardSuit = ["hearts", "spades", "diamonds", "clubs"];
   const cardValue = [
     "2",
     "3",
@@ -43,3 +50,15 @@ const playGame = () => {
   console.log(randomCard);
 };
 playGame();
+
+const showNewCard = (randomCard) => {
+  card1.style.backgroundColor = "blue";
+  card1.textContent = randomCard;
+};
+
+buttonStart.addEventListener("click", function () {
+  containerElement.classList.add("hidden");
+  container__gameElement.classList.remove("hidden");
+});
+
+buttonGreater.addEventListener("click", showNewCard);
