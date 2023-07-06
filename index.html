@@ -6,26 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Card Game</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/a-favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
-  <script src="/main.js"></script>
+  <script src="/main.js" defer></script>
 </head>
 
 <body>
-  <div class="container hidden">
+  <section class="container">
     <h1 class="title">Welcome to card game</h1>
-    <button class="button__start" type="submit">START</button>
-  </div>
-  <section class="container__game">
+    <button class="button__start" type="text">START</button>
+  </section>
+  <section class="container__game hidden">
     <span class="title">GREATER OR SMALLER?</span>
-    <div class="container__cards"></div>
-    <li class="card"></li>
-    <li class="card"></li>
-    <div class="button__container">
-      <button class="button__game" type="submit">GREATER</button>
-      <button class="button__game" type="submit">SMALLER</button>
+    <ul class="container__cards">
+      <li class="card1"></li>
+      <li class="card2"></li>
+    </ul>
+    <div class="display__result">
+      <span>Next card would be greater or smaller?</span>
     </div>
+    <section class="button__container">
+      <button class="button__greater" type="submit">GREATER</button>
+      <button class="button__smaller" type="submit">SMALLER</button>
+    </section>
   </section>
 
 </body>
