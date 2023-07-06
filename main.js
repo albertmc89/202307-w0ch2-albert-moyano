@@ -53,9 +53,7 @@ const playGame = () => {
   const deckToPlay = generateDeckCards();
   let randomCard = getRandomCard(deckToPlay);
   let randomCardToGuess = getRandomCard(deckToPlay);
-  // console.log(randomCard);
-  // console.log(randomCardToGuess);
-  // console.log(deckToPlay);
+
   const setRound = () => {
     randomCard = getRandomCard(deckToPlay);
     randomCardToGuess = getRandomCard(deckToPlay);
