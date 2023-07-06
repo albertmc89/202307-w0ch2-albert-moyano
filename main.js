@@ -3,7 +3,9 @@ const containerElement = document.querySelector(".container");
 const container__gameElement = document.querySelector(".container__game");
 
 const buttonGreater = document.querySelector(".button__greater");
-const card1 = document.querySelector(".card1");
+const buttonSmaller = document.querySelector(".button__smaller");
+const card1 = document.querySelector(".card2");
+const card2 = document.querySelector(".card2");
 
 const generateDeckCards = () => {
   const cardSuit = ["hearts", "spades", "diamonds", "clubs"];
@@ -51,9 +53,9 @@ const playGame = () => {
 };
 playGame();
 
-const showNewCard = (randomCard) => {
-  card1.style.backgroundColor = "blue";
-  card1.textContent = randomCard;
+const showNewCard = (cardDeck) => {
+  card2.style.backgroundColor = "blue";
+  card2.textContent = getRandomCard(cardDeck);
 };
 
 buttonStart.addEventListener("click", function () {
