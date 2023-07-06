@@ -1,6 +1,9 @@
 const buttonStart = document.querySelector(".button__start");
 const containerElement = document.querySelector(".container");
 const container__gameElement = document.querySelector(".container__game");
+const displayWinElement = document.querySelector(".display__result__win");
+const displayLoseElement = document.querySelector(".display__result__lose");
+const displayInfoElement = document.querySelector(".display__info");
 
 const buttonGreater = document.querySelector(".button__greater");
 const buttonSmaller = document.querySelector(".button__smaller");
@@ -64,11 +67,13 @@ const playGame = () => {
     if (
       deckToPlay.indexOf(randomCard) < deckToPlay.indexOf(randomCardToGuess)
     ) {
-      console.log("ganas");
+      displayWinElement.classList.remove("hidden");
+      displayInfoElement.classList.add("hidden");
     } else if (
       deckToPlay.indexOf(randomCard) >= deckToPlay.indexOf(randomCardToGuess)
     ) {
-      console.log("pierdes");
+      displayLoseElement.classList.remove("hidden");
+      displayInfoElement.classList.add("hidden");
     }
   });
 
@@ -77,12 +82,14 @@ const playGame = () => {
     if (
       deckToPlay.indexOf(randomCard) > deckToPlay.indexOf(randomCardToGuess)
     ) {
-      console.log("ganas");
+      displayWinElement.classList.remove("hidden");
+      displayInfoElement.classList.add("hidden");
     }
     if (
       deckToPlay.indexOf(randomCard) <= deckToPlay.indexOf(randomCardToGuess)
     ) {
-      console.log("pierdes");
+      displayLoseElement.classList.remove("hidden");
+      displayInfoElement.classList.add("hidden");
     }
   });
 };
