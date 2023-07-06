@@ -4,8 +4,8 @@ const container__gameElement = document.querySelector(".container__game");
 
 const buttonGreater = document.querySelector(".button__greater");
 const buttonSmaller = document.querySelector(".button__smaller");
-const card1 = document.querySelector(".card2");
-const card2 = document.querySelector(".card2");
+const card1Element = document.querySelector(".card2");
+const card2Element = document.querySelector(".card2");
 
 const generateDeckCards = () => {
   const cardSuit = ["hearts", "spades", "diamonds", "clubs"];
@@ -43,24 +43,23 @@ const getRandomCard = (cardDeck) => {
   const randomValue = Math.floor(Math.random() * cardDeck.length);
   const randomCard = `${cardDeck[randomValue]}`;
 
-  return `Esta es la carta generada aleatoriamente: ${randomCard}`;
+  return randomCard;
+};
+
+const showNewCard = (randomCard) => {
+  card2Element.style.backgroundColor = "white";
+  card2Element.textContent = randomCard;
 };
 
 const playGame = () => {
   const deckToPlay = generateDeckCards();
   const randomCard = getRandomCard(deckToPlay);
   console.log(randomCard);
+  buttonGreater.addEventListener("click", showNewCard(randomCard));
 };
 playGame();
-
-const showNewCard = (cardDeck) => {
-  card2.style.backgroundColor = "blue";
-  card2.textContent = getRandomCard(cardDeck);
-};
 
 buttonStart.addEventListener("click", function () {
   containerElement.classList.add("hidden");
   container__gameElement.classList.remove("hidden");
 });
-
-buttonGreater.addEventListener("click", showNewCard);
