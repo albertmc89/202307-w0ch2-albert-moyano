@@ -51,19 +51,33 @@ const getRandomCard = (cardDeck) => {
 
 const playGame = () => {
   const deckToPlay = generateDeckCards();
-  const randomCard = getRandomCard(deckToPlay);
-  const randomCardToGuess = getRandomCard(deckToPlay);
-  console.log(randomCard);
-  console.log(randomCardToGuess);
-  console.log(deckToPlay);
+  let randomCard = getRandomCard(deckToPlay);
+  let randomCardToGuess = getRandomCard(deckToPlay);
+  // console.log(randomCard);
+  // console.log(randomCardToGuess);
+  // console.log(deckToPlay);
+  const setRound = () => {
+    randomCard = getRandomCard(deckToPlay);
+    randomCardToGuess = getRandomCard(deckToPlay);
+    buttonSmaller.disabled = false;
+    buttonGreater.disabled = false;
+    card2Element.textContent = "";
+    card1Element.textContent = randomCard;
+    displayLoseElement.classList.add("hidden");
+    displayWinElement.classList.add("hidden");
+    displayInfoElement.classList.remove("hidden");
+  };
 
   buttonStart.addEventListener("click", function () {
     card1Element.textContent = randomCard;
     containerElement.classList.add("hidden");
     container__gameElement.classList.remove("hidden");
   });
+
   buttonGreater.addEventListener("click", function () {
     card2Element.textContent = randomCardToGuess;
+    buttonSmaller.disabled = true;
+    buttonGreater.disabled = true;
     if (
       deckToPlay.indexOf(randomCard) < deckToPlay.indexOf(randomCardToGuess)
     ) {
@@ -75,10 +89,13 @@ const playGame = () => {
       displayLoseElement.classList.remove("hidden");
       displayInfoElement.classList.add("hidden");
     }
+    setTimeout(setRound, 2000);
   });
 
   buttonSmaller.addEventListener("click", function () {
     card2Element.textContent = randomCardToGuess;
+    buttonSmaller.disabled = true;
+    buttonGreater.disabled = true;
     if (
       deckToPlay.indexOf(randomCard) > deckToPlay.indexOf(randomCardToGuess)
     ) {
@@ -91,6 +108,7 @@ const playGame = () => {
       displayLoseElement.classList.remove("hidden");
       displayInfoElement.classList.add("hidden");
     }
+    setTimeout(setRound, 2000);
   });
 };
 
