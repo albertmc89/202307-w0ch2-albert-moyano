@@ -8,7 +8,7 @@ const card1Element = document.querySelector(".card1");
 const card2Element = document.querySelector(".card2");
 
 const generateDeckCards = () => {
-  const cardSuit = ["hearts", "spades", "diamonds", "clubs"];
+  const cardSuit = ["♥️", "♠️", "♦️", "♣️"];
   const cardValue = [
     "2",
     "3",
@@ -24,12 +24,12 @@ const generateDeckCards = () => {
     "K",
   ];
   let cardDeck = [];
-  for (let positionSuit = 0; positionSuit < cardSuit.length; positionSuit++) {
-    for (
-      let positionValue = 0;
-      positionValue < cardValue.length;
-      positionValue++
-    ) {
+  for (
+    let positionValue = 0;
+    positionValue < cardValue.length;
+    positionValue++
+  ) {
+    for (let positionSuit = 0; positionSuit < cardSuit.length; positionSuit++) {
       let suit = cardSuit[positionSuit];
       let value = cardValue[positionValue];
       let card = `${value} ${suit}`;
@@ -45,14 +45,6 @@ const getRandomCard = (cardDeck) => {
 
   return randomCard;
 };
-
-// const showNewCard = (randomCard) => {
-//   card1Element.textContent = randomCard;
-// };
-
-// const showNewGuessCard = (randomCard) => {
-//   card2Element.textContent = randomCard;
-// };
 
 const playGame = () => {
   const deckToPlay = generateDeckCards();
