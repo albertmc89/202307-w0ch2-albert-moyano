@@ -66,13 +66,13 @@ const playGame = () => {
     displayInfoElement.classList.remove("hidden");
   };
 
-  buttonStart.addEventListener("click", function () {
+  buttonStart.addEventListener("click", () => {
     card1Element.textContent = randomCard;
     containerElement.classList.add("hidden");
     container__gameElement.classList.remove("hidden");
   });
 
-  buttonGreater.addEventListener("click", function () {
+  buttonGreater.addEventListener("click", () => {
     card2Element.textContent = randomCardToGuess;
     buttonSmaller.disabled = true;
     buttonGreater.disabled = true;
@@ -90,7 +90,7 @@ const playGame = () => {
     setTimeout(setRound, 2000);
   });
 
-  buttonSmaller.addEventListener("click", function () {
+  buttonSmaller.addEventListener("click", () => {
     card2Element.textContent = randomCardToGuess;
     buttonSmaller.disabled = true;
     buttonGreater.disabled = true;
