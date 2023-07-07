@@ -8,9 +8,14 @@
 }
 
 body {
-  background-color: rgb(69, 104, 230);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(55, 55, 227, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   font-weight: 700;
-  /* min-height: 700px; */
   display: flex;
   justify-content: center;
   font-family: var(--fuenteprincipal);
@@ -20,7 +25,7 @@ body {
   background-color: cornsilk;
   border-radius: 7rem;
   margin-top: 7rem;
-  padding: 10rem;
+  padding: 9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +35,8 @@ body {
 .title {
   font-size: 2.2rem;
   font-weight: 700;
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 .button__start,
@@ -55,17 +62,17 @@ body {
   margin-top: 7rem;
   background-color: cornsilk;
   border-radius: 7rem;
-  padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  width: 40rem;
 }
 
 .container__game__cards {
   padding: 0;
-  width: 40rem;
-  height: 25rem;
+  /* width: 40rem;
+  height: 25rem; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -80,12 +87,12 @@ body {
   width: 13rem;
   height: 21rem;
   list-style: none;
-  border-radius: 10%;
+  border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
-  box-shadow: 3px 6px 3px 1px red;
+  font-size: 4rem;
+  box-shadow: 3px 6px 3px 1px rgb(135, 132, 132);
 }
 
 .display__info {
@@ -94,7 +101,7 @@ body {
 
 .display__result__win,
 .display__result__lose {
-  padding: 2rem;
+  padding: 1rem;
   font-size: 2rem;
 }
 
@@ -102,6 +109,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 4rem;
+  margin-bottom: 2rem;
 }
 
 .hidden {
