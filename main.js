@@ -82,7 +82,7 @@ const playGame = () => {
       displayWinElement.classList.remove("hidden");
       displayInfoElement.classList.add("hidden");
     } else if (
-      deckToPlay.indexOf(randomCard) >= deckToPlay.indexOf(randomCardToGuess)
+      deckToPlay.indexOf(randomCard) > deckToPlay.indexOf(randomCardToGuess)
     ) {
       displayLoseElement.classList.remove("hidden");
       displayInfoElement.classList.add("hidden");
@@ -101,7 +101,7 @@ const playGame = () => {
       displayInfoElement.classList.add("hidden");
     }
     if (
-      deckToPlay.indexOf(randomCard) <= deckToPlay.indexOf(randomCardToGuess)
+      deckToPlay.indexOf(randomCard) < deckToPlay.indexOf(randomCardToGuess)
     ) {
       displayLoseElement.classList.remove("hidden");
       displayInfoElement.classList.add("hidden");
