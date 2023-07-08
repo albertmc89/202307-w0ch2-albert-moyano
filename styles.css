@@ -39,7 +39,6 @@ body {
   margin-top: 3.5rem;
   color: rgb(255, 255, 255);
   padding: 1rem;
-  box-shadow: 4px 4px 5px 4px rgb(0, 0, 0);
 }
 
 .button__start,
@@ -75,6 +74,8 @@ body {
 .container__game {
   margin-top: 7rem;
   background-image: url(/fondo-mesa-poker.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 7rem;
   display: flex;
   flex-direction: column;
@@ -96,12 +97,12 @@ body {
 
 .card1,
 .card2 {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.977);
   border: 0.1rem solid black;
   width: 13rem;
   height: 21rem;
   list-style: none;
-  border-radius: 2rem;
+  border-radius: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,6 +115,7 @@ body {
   padding: 1rem;
   font-size: 2rem;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 .button__container {
