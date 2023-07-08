@@ -59,13 +59,14 @@ body {
 
 .container__game {
   margin-top: 7rem;
-  background-color: cornsilk;
+  background-image: url(/fondo-mesa-poker.avif);
   border-radius: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
   width: 50rem;
+  border: 4px solid black;
 }
 
 .container__game__cards {
@@ -79,7 +80,7 @@ body {
 
 .card1,
 .card2 {
-  background-color: rgb(213, 255, 207);
+  background-color: rgb(255, 255, 255);
   border: 0.2rem solid black;
   width: 13rem;
   height: 21rem;
@@ -89,7 +90,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 4rem;
-  box-shadow: 3px 6px 3px 1px rgb(135, 132, 132);
+  box-shadow: 1px 2px 2px 1px rgb(219, 217, 217);
 }
 
 .display__info {
