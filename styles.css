@@ -21,7 +21,8 @@ body {
 }
 
 .container {
-  background-color: cornsilk;
+  background-image: url(/fondo-de-juego2.webp);
+  border: 0.8rem solid black;
   border-radius: 7rem;
   margin-top: 7rem;
   padding: 9rem;
@@ -36,25 +37,39 @@ body {
   font-weight: 700;
   text-align: center;
   margin-top: 3.5rem;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  box-shadow: 4px 4px 5px 4px rgb(0, 0, 0);
 }
 
 .button__start,
 .button__greater,
 .button__smaller {
-  background-color: rgb(147, 252, 42);
-  padding: 1rem;
-  width: 10rem;
-  border-radius: 1.5rem;
-  border-color: black;
+  background: linear-gradient(
+    90deg,
+    rgb(121, 16, 16) 0%,
+    rgba(255, 0, 0, 1) 97%,
+    rgba(227, 55, 55, 1) 100%
+  );
+  padding: 3.3rem;
+  width: 9.2rem;
+  border-radius: 50%;
+  border: 0.6rem solid rgb(255, 255, 255);
+  border-style: dashed;
   cursor: pointer;
   font-weight: 700;
   font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+  box-shadow: inset 1px 3px 2px 0.5px rgb(196, 60, 60);
+  box-shadow: 1px 1px 2px 1px rgb(100, 8, 8);
 }
 
 .button__start:active,
 .button__greater:active,
 .button__smaller:active {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .container__game {
@@ -64,9 +79,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 3.4rem;
   width: 50rem;
-  border: 4px solid black;
+  border: 0.8rem solid black;
+  box-shadow: inset 1px 2px 3px 1.5px rgb(0, 0, 0);
 }
 
 .container__game__cards {
@@ -81,7 +97,7 @@ body {
 .card1,
 .card2 {
   background-color: rgb(255, 255, 255);
-  border: 0.2rem solid black;
+  border: 0.1rem solid black;
   width: 13rem;
   height: 21rem;
   list-style: none;
@@ -90,16 +106,14 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 4rem;
-  box-shadow: 1px 2px 2px 1px rgb(219, 217, 217);
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
 }
 
+.display__result,
 .display__info {
-  font-size: 2rem;
-}
-
-.display__result {
   padding: 1rem;
   font-size: 2rem;
+  color: rgb(255, 255, 255);
 }
 
 .button__container {
