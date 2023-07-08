@@ -9,6 +9,7 @@ const buttonGreater = document.querySelector(".button__greater");
 const buttonSmaller = document.querySelector(".button__smaller");
 const card1Element = document.querySelector(".card1");
 const card2Element = document.querySelector(".card2");
+const result = document.querySelector(".display__result");
 
 const generateDeckCards = () => {
   const cardSuit = ["♥️", "♠️", "♦️", "♣️"];
@@ -61,8 +62,7 @@ const playGame = () => {
     buttonGreater.disabled = false;
     card2Element.textContent = "?";
     card1Element.textContent = randomCard;
-    displayLoseElement.classList.add("hidden");
-    displayWinElement.classList.add("hidden");
+    result.classList.add("hidden");
     displayInfoElement.classList.remove("hidden");
   };
 
@@ -79,13 +79,15 @@ const playGame = () => {
     if (
       deckToPlay.indexOf(randomCard) < deckToPlay.indexOf(randomCardToGuess)
     ) {
-      displayWinElement.classList.remove("hidden");
+      result.textContent = "You Win!😊";
       displayInfoElement.classList.add("hidden");
+      result.classList.remove("hidden");
     } else if (
       deckToPlay.indexOf(randomCard) > deckToPlay.indexOf(randomCardToGuess)
     ) {
-      displayLoseElement.classList.remove("hidden");
+      result.textContent = "You Lose!😮‍💨";
       displayInfoElement.classList.add("hidden");
+      result.classList.remove("hidden");
     }
     setTimeout(setRound, 2000);
   });
@@ -97,14 +99,16 @@ const playGame = () => {
     if (
       deckToPlay.indexOf(randomCard) > deckToPlay.indexOf(randomCardToGuess)
     ) {
-      displayWinElement.classList.remove("hidden");
       displayInfoElement.classList.add("hidden");
+      result.textContent = "You Win!😊";
+      result.classList.remove("hidden");
     }
     if (
       deckToPlay.indexOf(randomCard) < deckToPlay.indexOf(randomCardToGuess)
     ) {
-      displayLoseElement.classList.remove("hidden");
       displayInfoElement.classList.add("hidden");
+      result.textContent = "You Lose!😮‍💨";
+      result.classList.remove("hidden");
     }
     setTimeout(setRound, 2000);
   });
