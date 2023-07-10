@@ -22,6 +22,7 @@ body {
 
 .container {
   background-image: url(/fondo-de-juego2.webp);
+  background-size: cover;
   border: 0.8rem solid black;
   border-radius: 7rem;
   margin-top: 7rem;
@@ -33,7 +34,7 @@ body {
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
   margin-top: 3.5rem;
@@ -57,7 +58,7 @@ body {
   border-style: dashed;
   cursor: pointer;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   color: white;
@@ -83,7 +84,7 @@ body {
   gap: 3.4rem;
   width: 50rem;
   border: 0.8rem solid black;
-  box-shadow: inset 1px 2px 3px 1.5px rgb(0, 0, 0);
+  box-shadow: inset 1px 3px 3px 1.5px rgb(0, 0, 0);
 }
 
 .container__game__cards {
@@ -113,7 +114,7 @@ body {
 .display__result,
 .display__info {
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: rgb(255, 255, 255);
   text-align: center;
 }
